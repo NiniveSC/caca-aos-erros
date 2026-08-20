@@ -7,8 +7,8 @@ $database = "caca_aos_erros"
 
 $conexao = new mysqli($host, $user, $password, $database)
 
-if ($conn->connect_error) {
-    die ("Erro na conexão: " . $conn->connect_error)
+if ($conexao->conexaoect_error) {
+    die ("Erro na conexão: " . $conexao->connect_error)
 }
 
 if (isset($_POST['cadastrar'])){
@@ -16,7 +16,7 @@ if (isset($_POST['cadastrar'])){
     $email = $_POST['email'];
 
     $sql = "INSERT INTO usuarios (nome, email) VALUES (?, ?)";
-    $stmt = $conn->prepare($sql);
+    $stmt = $conexao->prepare($sql);
 
     $stmt->bind_param("ss", $nome, $email);
     $stmt->execute();
@@ -30,7 +30,7 @@ if (isset($_GET['excluir'])) {
 $id = $_GET['excluir'];
 
 $sql = "DELETE FROM usuarios WHERE id = ?";
-$stmt = $conn->prepare($sql);
+$stmt = $conexao->prepare($sql);
 
 $stmt->bind_param("i", $id);
 $stmt->execute();
@@ -45,7 +45,7 @@ if (isset($_POST['editar'])) {
     $email = $_POST['email'];
 
     $sql = "UPDATE usuarios SET nome = ?, email = ? WHERE id = ?";
-    $stmt = $conn->prepare($sql);
+    $stmt = $conexao->prepare($sql);
 
     $stmt->bind_param("ssi", $nome, $email, $id);
     $stmt->execute();
@@ -55,7 +55,7 @@ if (isset($_POST['editar'])) {
 }
 
 $sql = "SELECT id, nome, email FROM usuarios ORDER BY id DESC";
-$resultado = $conn->query($sql);
+$resultado = $conexao->query($sql);
 
 ?>
 
