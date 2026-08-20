@@ -16,5 +16,8 @@ Um "{" onde não deveria, esta dentro de onde não deveria
 Um "}" onde não deveria, esta dentro de onde não deveria
  - `<?php } ?>`
 
+### 5° - $conn
+Onde deveria estar $conexao esta $conn
+- `$conn = new mysqli($host, $user, $password, $database)`
 
 # Código 2
