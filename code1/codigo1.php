@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $user = "root";
-$passaword = "";
+$passaword = "root";
 $database = "caca_aos_erros";
 
 $conexao = new mysqli($host, $user, $password, $database);
