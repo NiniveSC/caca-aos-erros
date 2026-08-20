@@ -5,7 +5,7 @@ $user = "root";
 $passaword = "";
 $database = "caca_aos_erros"
 
-$conn = new mysqli($host, $user, $password, $database)
+$conexao = new mysqli($host, $user, $password, $database)
 
 if ($conn->connect_error) {
     die ("Erro na conexão: " . $conn->connect_error)
