@@ -1,8 +1,8 @@
 <?php
 
 $host = "localhost";
-$user = "root"
-$password = " ";
+$user = "root";
+$password = "root";
 $database = "caca_aos_erros";
 
 $conexao = new mysqli($host, $user, $password, $database);
@@ -114,7 +114,10 @@ $resultado = $conexao->query($sql);
                 <td>
                     <a href="codigo1.php?excluir=<?= $usuario['id'] ?>">
                         Excluir
-                    </a>    
+                    </a>   
+                    <a href="codigo1.php?editar=<?= $usuario['id'] ?>">
+                        Editar
+                    </a> 
                     
                 </td>
             </tr>
