@@ -3,9 +3,9 @@
 $host = "localhost";
 $user = "root";
 $passaword = "";
-$database = "caca_aos_erros"
+$database = "caca_aos_erros";
 
-$conexao = new mysqli($host, $user, $password, $database)
+$conexao = new mysqli($host, $user, $password, $database);
 
 if ($conexao->connect_error) {
     die ("Erro na conexão: " . $conexao->connect_error)
@@ -97,7 +97,7 @@ $resultado = $conexao->query($sql);
             <th>Ações<th>
         </tr> 
         
-        <?php while ($usuario = $resultado->fetch_assoc()) ?>
+        <?php while ($usuario = $resultado->fetch_assoc()){ ?>
             <tr>
                 <td>
                     <?= $usuario['id'] ?>
@@ -119,7 +119,7 @@ $resultado = $conexao->query($sql);
                 </td>
             </tr>
 
-        <?php?>  
+        <?php } ?>  
 
     </table>
 </body>
