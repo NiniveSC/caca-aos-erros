@@ -91,10 +91,10 @@ $resultado = $conexao->query($sql);
     
     <table border="1">
         <tr>
-            <th>ID<th>
-            <th>Nome<th>
-            <th>E-mail<th>
-            <th>Ações<th>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Ações</th>
         </tr> 
         
         <?php while ($usuario = $resultado->fetch_assoc()){ ?>
