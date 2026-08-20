@@ -9,7 +9,11 @@ Na seguinte parte do código estava faltando um ";"
 - $resultado = $conn->query($sql)
 
 ### 3° - {
-Um "{" onde não deveria, não esta fechando com nada
+Um "{" onde não deveria, esta dentro de onde não deveria
 - <? php while ($usuario = $resultado->fetch_assoc()) { ?>
+
+### 4° - }
+Um "}" onde não deveria, esta dentro de onde não deveria
+- <?php } ?>  
 
 # Código 2
