@@ -7,7 +7,7 @@ $database = "caca_aos_erros"
 
 $conexao = new mysqli($host, $user, $password, $database)
 
-if ($conexao->conexaoect_error) {
+if ($conexao->connect_error) {
     die ("Erro na conexão: " . $conexao->connect_error)
 }
 
