@@ -8,16 +8,8 @@ Na seguinte parte do código estava faltando um ";"
 Na seguinte parte do código estava faltando um ";"
 - `$resultado = $conn->query($sql)`
 
-### 3° - {
-Um "{" onde não deveria, esta dentro de onde não deveria
-- `<? php while ($usuario = $resultado->fetch_assoc()) { ?>`
-
-### 4° - }
-Um "}" onde não deveria, esta dentro de onde não deveria
- - `<?php } ?>`
-
-### 5° - $conn
-Onde deveria estar $conexao esta $conn
+### 3° - $conn
+Onde deveria estar $conexao esta $conn, em todod código, um deles:
 - `$conn = new mysqli($host, $user, $password, $database)`
 
 # Código 2
